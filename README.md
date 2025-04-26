@@ -16,8 +16,7 @@ Welcome to your next-generation weather website! This project brings weather dat
 
 ## 🌈 Live Preview
 
-[🔗 Live Demo](#)  
-*(Replace with your deployed link)*
+[🔗 Live Demo](https://weather-webchat-822ft9jx8-r123singhs-projects.vercel.app/)  
 
 ---
 
@@ -42,8 +41,8 @@ Welcome to your next-generation weather website! This project brings weather dat
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/yourusername/weather-chatbot.git
-   cd weather-chatbot
+   git clone https://github.com/r123singh/smart-weather-website.git
+   cd smart-weather-website
    ```
 2. **Install dependencies:**
    ```bash
