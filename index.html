@@ -1,0 +1,441 @@
+<!-- Interactive Weather Website -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Weather Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Search and Location Header -->
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for location">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="persona-selector">
+                <button class="persona-btn">Persona</button>
+                <div class="persona-dropdown persona-tabs">
+                    <div class="persona-option active" data-persona="weather-enthusiast">🌦️<span>Weather Enthusiast</span></div>
+                    <div class="persona-option" data-persona="farmer">🧑‍🌾<span>Farmer</span></div>
+                    <div class="persona-option" data-persona="tourist">🏖️<span>Tourist</span></div>
+                    <div class="persona-option" data-persona="student">👩‍🎓<span>Student</span></div>
+                    <div class="persona-option" data-persona="disaster-management">🚨<span>Disaster Management</span></div>
+                    <div class="persona-option" data-persona="athlete">🏃‍♂️<span>Athlete/Sports Enthusiast</span></div>
+                    <div class="persona-option" data-persona="event-planner">🏞️<span>Outdoor Event Planner</span></div>
+                    <div class="persona-option" data-persona="photographer">📸<span>Photographer</span></div>
+                    <div class="persona-option" data-persona="construction">👷‍♂️<span>Construction Worker</span></div>
+                    <div class="persona-option" data-persona="pilot">🛩️<span>Pilot/Aviation Professional</span></div>
+                    <div class="persona-option" data-persona="marine">🚢<span>Marine Professional</span></div>
+                    <div class="persona-option" data-persona="healthcare">👩‍⚕️<span>Healthcare Worker</span></div>
+                    <div class="persona-option" data-persona="pet-owner">🐶<span>Pet Owner</span></div>
+                    <div class="persona-option" data-persona="commuter">🚗<span>Commuter</span></div>
+                    <div class="persona-option" data-persona="gardener">🌱<span>Home Gardener</span></div>
+                </div>
+            </div>
+            <div class="location-tabs">
+                <div class="location-tab">Amazonia ☁️ 24°</div>
+                <div class="location-tab active">New Delhi ☀️ 29°</div>
+            </div>
+        </header>
+
+        <!-- Main Weather Content -->
+        <main class="main-content">
+            <div class="current-location">
+                <h2>New Delhi, Delhi</h2>
+                <button class="location-pin">📍</button>
+            </div>
+
+            <div class="weather-display">
+                <div class="current-weather">
+                    <div class="time">12:17 AM</div>
+                    <div class="temperature">
+                        <div class="temp-icon">☀️</div>
+                        <div class="temp-value">29°C</div>
+                    </div>
+                    <div class="weather-condition">Haze</div>
+                    <div class="feels-like">Feels like 28°</div>
+                    <div class="forecast-note">Expect sunny skies. The high will be 41°.</div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Air quality</span>
+                        <span class="value">229</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind</span>
+                        <span class="value">1 km/h ↑</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span class="value">45%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Visibility</span>
+                        <span class="value">4 km</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Pressure</span>
+                        <span class="value">1005 mb</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Dew point</span>
+                        <span class="value">16°</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Navigation -->
+            <nav class="weather-nav">
+                <button class="nav-btn active">Hourly</button>
+                <button class="nav-btn">Overview</button>
+                <button class="nav-btn">Precipitation</button>
+                <button class="nav-btn">Wind</button>
+                <button class="nav-btn">Air Quality</button>
+                <button class="nav-btn">Humidity</button>
+                <button class="nav-btn">Cloud cover</button>
+            </nav>
+
+            <!-- Air Quality Timeline -->
+            <div class="air-quality-timeline">
+                <div class="timeline-item">
+                    <div class="day">Yesterday</div>
+                    <div class="aqi">177</div>
+                    <div class="quality-bar moderate"></div>
+                    <div class="quality-text">Moderate pollution</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="day">Today</div>
+                    <div class="aqi">229</div>
+                    <div class="quality-bar poor"></div>
+                    <div class="quality-text">Poor</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="day">Sat</div>
+                    <div class="aqi">156</div>
+                    <div class="quality-bar moderate"></div>
+                    <div class="quality-text">Moderate pollution</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="day">Sun</div>
+                    <div class="aqi">161</div>
+                    <div class="quality-bar moderate"></div>
+                    <div class="quality-text">Moderate pollution</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="day">Mon</div>
+                    <div class="aqi">160</div>
+                    <div class="quality-bar moderate"></div>
+                    <div class="quality-text">Moderate pollution</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Hourly Temperature Graph -->
+    <div class="hourly-graph-container">
+        <div class="graph-header">
+            <h3>Overview</h3>
+            <div class="graph-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="feelsLikeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Feels like</span>
+            </div>
+        </div>
+        <div class="temperature-graph">
+            <div class="time-slots">
+                <div class="time-slot">
+                    <span class="time">9 PM</span>
+                    <span class="weather-icon">🌙</span>
+                    <span class="temp">32°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">Now</span>
+                    <span class="weather-icon">🌤️</span>
+                    <span class="temp">29°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">1 AM</span>
+                    <span class="weather-icon">🌥️</span>
+                    <span class="temp">28°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">3 AM</span>
+                    <span class="weather-icon">🌥️</span>
+                    <span class="temp">26°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">5 AM</span>
+                    <span class="weather-icon">🌥️</span>
+                    <span class="temp">26°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">7 AM</span>
+                    <span class="weather-icon">🌤️</span>
+                    <span class="temp">28°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">9 AM</span>
+                    <span class="weather-icon">🌤️</span>
+                    <span class="temp">33°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">11 AM</span>
+                    <span class="weather-icon">🌤️</span>
+                    <span class="temp">36°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">1 PM</span>
+                    <span class="weather-icon">🌥️</span>
+                    <span class="temp">39°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">3 PM</span>
+                    <span class="weather-icon">🌥️</span>
+                    <span class="temp">39°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">5 PM</span>
+                    <span class="weather-icon">🌥️</span>
+                    <span class="temp">39°</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">7 PM</span>
+                    <span class="weather-icon">🌥️</span>
+                    <span class="temp">36°</span>
+                </div>
+            </div>
+            <div class="graph-canvas">
+                <canvas id="temperatureGraph"></canvas>
+            </div>
+            <div class="precipitation-bar">
+                <div class="precip-indicator" style="left: calc(75% - 2px)">
+                    <span class="sunrise-icon">🌅</span>
+                    <span class="time-label">5:45 AM</span>
+                </div>
+                <div class="precip-indicator" style="left: calc(95% - 2px)">
+                    <span class="sunset-icon">🌇</span>
+                    <span class="time-label">6:53 PM</span>
+                </div>
+                <div class="precip-levels">
+                    <div class="precip-level" style="width: 60%" data-percentage="0%"></div>
+                    <div class="precip-level" style="width: 15%" data-percentage="1%"></div>
+                    <div class="precip-level" style="width: 10%" data-percentage="2%"></div>
+                    <div class="precip-level" style="width: 10%" data-percentage="2%"></div>
+                    <div class="precip-level" style="width: 5%" data-percentage="2%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weather Details Grid -->
+    <div class="weather-details-grid">
+        <div class="details-header">
+            <h2>Weather details</h2>
+            <span class="time">11:51 PM</span>
+            <a href="#" class="suggestions-link">SUGGESTIONS FOR YOUR DAY →</a>
+        </div>
+        
+        <div class="details-container">
+            <!-- Temperature Card -->
+            <div class="detail-card">
+                <h3>Temperature</h3>
+                <div class="temp-graph">
+                    <div class="line-graph cyan"></div>
+                    <span class="temp-value">29°</span>
+                </div>
+                <div class="status steady">
+                    <span class="status-dot"></span>
+                    Steady
+                </div>
+                <p class="status-description">Steady at current value of 29°. Tomorrow expected to be colder than today.</p>
+            </div>
+
+            <!-- Feels Like Card -->
+            <div class="detail-card">
+                <h3>Feels like</h3>
+                <div class="feels-like-content">
+                    <div class="temp-graph">
+                        <div class="line-graph pink"></div>
+                    </div>
+                    <div class="feels-like-info">
+                        <p class="dominant">Dominant factor: none</p>
+                        <div class="temp-comparison">
+                            <div>
+                                <span class="label">Feels like:</span>
+                                <span class="value">29°</span>
+                            </div>
+                            <div>
+                                <span class="label">Temperature:</span>
+                                <span class="value">29°</span>
+                            </div>
+                        </div>
+                        <div class="comfort-level">
+                            <span class="comfort-dot"></span>
+                            Slightly Warm
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Cover Card -->
+            <div class="detail-card">
+                <h3>Cloud cover</h3>
+                <div class="cloud-display">
+                    <div class="cloud-circle">
+                        <div class="cloud-icon">⛅</div>
+                        <span>Partly cloudy</span>
+                    </div>
+                </div>
+                <div class="status steady">
+                    <span class="status-dot"></span>
+                    N/A
+                </div>
+                <p class="status-description">Steady with partly cloudy sky at 11:54 pm. Tomorrow expected to see more cloud cover.</p>
+            </div>
+
+            <!-- Precipitation Card -->
+            <div class="detail-card">
+                <h3>Precipitation</h3>
+                <div class="precip-display">
+                    <div class="precip-circle">
+                        <span class="precip-value">0</span>
+                        <span class="precip-unit">cm</span>
+                        <span class="precip-period">in next 24h</span>
+                    </div>
+                </div>
+                <div class="status no-precip">
+                    <span class="status-dot"></span>
+                    No Precipitation
+                </div>
+                <p class="status-description">No precipitation in the next 24 hours.</p>
+            </div>
+
+            <!-- Wind Card -->
+            <div class="detail-card">
+                <h3>Wind</h3>
+                <div class="wind-display">
+                    <div class="wind-compass">
+                        <div class="compass-arrow" style="transform: rotate(0deg)"></div>
+                        <span class="direction">N</span>
+                    </div>
+                    <div class="wind-info">
+                        <div class="wind-speed">
+                            <span class="value">1</span>
+                            <span class="unit">km/h</span>
+                            <span class="label">Wind Speed</span>
+                        </div>
+                        <div class="wind-gust">
+                            <span class="value">12</span>
+                            <span class="unit">km/h</span>
+                            <span class="label">Wind Gust</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="status calm">
+                    <span class="status-dot"></span>
+                    Force: 0 (Calm)
+                </div>
+                <p class="status-description">Steady with averages holding at 1 km/h (gusts to 12) expected from the S through the night.</p>
+            </div>
+
+            <!-- Humidity Card -->
+            <div class="detail-card">
+                <h3>Humidity</h3>
+                <div class="humidity-display">
+                    <div class="humidity-bars">
+                        <div class="bar-container">
+                            <div class="humidity-bar" style="height: 100%"></div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="humidity-bar" style="height: 90%"></div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="humidity-bar" style="height: 80%"></div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="humidity-bar" style="height: 70%"></div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="humidity-bar" style="height: 60%"></div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="humidity-bar" style="height: 50%"></div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="humidity-bar" style="height: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="humidity-values">
+                        <div class="humidity-percentage">
+                            <span class="value">48%</span>
+                            <span class="label">Relative Humidity</span>
+                        </div>
+                        <div class="dew-point">
+                            <span class="value">17°</span>
+                            <span class="label">Dew point</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="status normal">
+                    <span class="status-dot"></span>
+                    Normal
+                </div>
+                <p class="status-description">Increasing with a peak of 52% at 12:00 am. Tomorrow's humidity levels are expected to be higher than today.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weather Chatbot -->
+    <div class="chatbot-container">
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="bot-icon">🤖</span>
+                    WeatherBot
+                </div>
+                <button class="minimize-btn" id="minimizeChat">−</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <!-- Hello! I'm your weather assistant. How can I help you today? 🌤️ -->
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Ask about weather..." id="chatInput">
+                <button class="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <div class="bot-avatar">
+                <div class="bot-face">
+                    <div class="bot-antenna"></div>
+                    <div class="bot-head">
+                        <div class="weather-icons">
+                            <span>☀️</span>
+                            <span>🌧️</span>
+                            <span>⛈️</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="radar-ring"></div>
+            </div>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
